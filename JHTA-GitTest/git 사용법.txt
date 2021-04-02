@@ -1,0 +1,65 @@
+1. 깃 파일 경로 정하기
+2. 로그인 (아이디, 이름)
+3. 깃 클론+주소(https://github.com/WITNUS/Final.git)
+4. 파일이동(프로젝트파일)
+5. 브랜치 생성
+6. 브랜치 자신걸로 옮겨보기
+7. 스프링에 프로젝트 들어갔나 보고 안들어 갔으면 파일 불러오기로 불러오기
+8. add commit push merge 해보기
+
+*****
+깃 복사 = ctrl+insert
+깃 붙임 = shift+insert
+현재 폴더 위치 확인 = pwd
+*****
+
+warning: LF will be replaced by CRLF in bora.txt.
+The file will have its original line endings in your working directory
+나오면
+윈도우: git config --global core.autocrlf true
+맥/리눅스: git config --global core.autocrlf input
+
+주의) 항상 장소확인 브랜치 확인
+
+아이디 등록(로그인)
+git config --global user.email "@naver.com"
+git config --global user.name ""
+
+>branch
+git checkout master (or kjs2)
+
+상태 확인(항상 확인해보기)
+>git status
+
+>넣기(push)
+> git add src/넣을 파일 명
+>git commit -m "파일명"
+>git push origin cyr
+
+오리지널 마스터 당기기 ( 병합 완료된 프로젝트 가져오기 )
+> git pull origin master
+
+순서!
+0. Git Bash 실행
+0-1. Git 프로젝트 폴더로 이동 (cd 경로)
+0-2. 로그인
+	git config --global user.email "@naver.com"
+	git config --global user.name ""
+0-3. 브랜치 로그인
+	git checkout cyr
+1. 경로확인
+2. 브런치 확인
+2-1. $ git status 		파일 확인 ( src로 시작하는 파일만 add )
+3. 넣을 파일 add
+3-1> $ git add src/com/evaluation/action/EvaluationFrontController.java
+3-2> $ git add  WebContent/css/
+4. git status 확인(초록색: add 잘됨)
+5. 커밋> $ git commit -m "comment/evaluation FrontController url 수정"
+6. 푸시> $ git push -u origin cyr
+7. git status 확인(없어야 잘 들어간 것)
+
+8. 깃 홈페이지
+8-1. Compare & pull request 버튼 클릭
+8-2. base:master <- compare:cyr 로 변경
+8-3. 입력창에 정보 입력 후 Create pull request 버튼 클릭
+8-4. merge
